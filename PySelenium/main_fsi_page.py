@@ -66,4 +66,18 @@ for i in range(0,len(a)):
     a[i].click()
     driver.back()
 
+# myFlightSafety
+myfsi = driver.find_element(By.XPATH, "/html/body/header/section/nav/ul/li[1]/a[2]")
+myfsi.click()
+
+# Enter in login information
+username = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="input28"]')))
+username.send_keys("")
+next = driver.find_element(By.XPATH, '//*[@id="form20"]/div[2]/input')
+next.click()
+username = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="input62"]')))
+username.send_keys("")
+verify = driver.find_element(By.XPATH, '//*[@id="form54"]/div[2]/input')
+verify.click()
+
 time.sleep(4)
